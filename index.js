@@ -4,6 +4,15 @@ const app = express() ;
 
 app.use(express.json()) ;
 
+
+app.get('/data',(req,res) => {
+
+
+    res.send(response) ;
+
+
+}) ;
+
 app.post('/data', (req,res) => {
 
     const response = req.body ;
