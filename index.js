@@ -5,21 +5,22 @@ const app = express() ;
 app.use(express.json()) ;
 
 
-app.get('/data',(req,res) => {
 
-
-    res.send(response) ;
-
-
-}) ;
 
 app.post('/data', (req,res) => {
 
     const response = req.body ;
+    
+    let responseObj = {
+     "fulfillmentText":response,
+     "fulfillmentMessages":[{"text":{"text":[response]}}],
+     "source":""
+
+    }
 
     console.log(response) ;
 
-   return res.json(response) ;
+   return res.json(responseObj) ;
 
 }) ;
 
