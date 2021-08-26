@@ -10,7 +10,7 @@ app.post('/data', (req,res) => {
 
     console.log(response) ;
 
-   return res.json( { name:"Scheduled"} ) ;
+   return res.json(response) ;
 
 }) ;
 
